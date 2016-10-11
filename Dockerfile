@@ -1,7 +1,7 @@
 FROM quay.io/informaticslab/asn-base-python
 
 # Python 2
-RUN conda create -y -n py2 python=2 ipykernel
+RUN conda create -y -n py2 python=2 ipykernel boto3
 RUN bash -c "source activate py2 && \
              conda install -y -c scitools iris cartopy"
 RUN bash -c "source activate py2 && jupyter kernelspec install-self"
